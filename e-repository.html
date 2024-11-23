@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Repository</title>
+    <link rel="stylesheet" href="e-repository.css">
+</head>
+<body>
+
+    <!-- Navbar (for Navigation Consistency) -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="e-exam.html">e-Exam</a>
+            <a href="openforum.html">Openforum</a>
+            <a href="e-repository.html" class="active">e-Repository</a>
+            <a href="mywall.html">MyWall</a>
+        </div>
+        <!-- Search Bar in Navbar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+
+    <!-- e-Repository Content -->
+    <section class="repository-section">
+        <header>
+            <h1>Welcome to the e-Repository</h1>
+            <p>Upload your files securely and access previously uploaded documents.</p>
+        </header>
+
+        <!-- File Upload Form -->
+        <div class="upload-section">
+            <form id="uploadForm">
+                <input type="file" id="fileInput" name="file" required>
+                <button type="submit">Upload File</button>
+            </form>
+        </div>
+
+        <!-- Uploaded Files List -->
+        <div class="file-list">
+            <h2>Previously Uploaded Files</h2>
+            <ul id="fileList">
+                <!-- Dynamically populated file list -->
+            </ul>
+        </div>
+    </section>
+
+    <script src="e-repository.js"></script>
+</body>
+</html>

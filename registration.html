@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* General styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form container styling */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        /* Label and input field styling */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Gender and Skills styling */
+        .gender-group, .skills-group {
+            margin-bottom: 15px;
+        }
+
+        .gender-group label,
+        .skills-group label {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        /* File input styling */
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <h2>Registration Form</h2>
+
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- ID Field -->
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Email ID Field -->
+        <label for="email">E-Mail ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Age Field -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" required>
+
+        <!-- Gender Radio Buttons -->
+        <div class="gender-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <!-- College Address Text Area -->
+        <label for="college_address">College Address:</label>
+        <textarea id="college_address" name="college_address" rows="4" required></textarea>
+
+        <!-- Branch Select Option -->
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+            <option value="cse">Computer Science Engineering</option>
+            <option value="ece">Electronics and Communication Engineering</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="civil">Civil Engineering</option>
+        </select>
+
+        <!-- Technical Skills Checkboxes -->
+        <div class="skills-group">
+            <label>Technical Skills:</label>
+            <input type="checkbox" id="skill_c" name="technical_skills" value="C">
+            <label for="skill_c">C</label>
+            <input type="checkbox" id="skill_java" name="technical_skills" value="Java">
+            <label for="skill_java">Java</label>
+            <input type="checkbox" id="skill_python" name="technical_skills" value="Python">
+            <label for="skill_python">Python</label>
+            <input type="checkbox" id="skill_jsp" name="technical_skills" value="JSP">
+            <label for="skill_jsp">JSP</label>
+        </div>
+
+        <!-- Resume Upload -->
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+        <!-- Photo Upload -->
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+
+        <!-- Submit and Reset Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
